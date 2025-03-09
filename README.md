@@ -1,2 +1,2 @@
-# TensorID-TBD-
+# TensorID
 Public code for tensor ID
