@@ -11,25 +11,26 @@ The main top-level functions are described below. See docstrings for full explan
 ## CoreID
 
 ```python
-CPSolver(...) # Initialize the solver with a tensor
-CPSolver.fit(...) # Return the index sets
+CPSolver(backend) # Initialize the solver for CP tensors, either backend = 'cpu' for which numpy and scipy is used, or backend = 'gpu' for which cupy is used
+CPSolver.fit(tensor, rank, method, ...) # Calculate the CoreID, return the selected index sets and satellite matrices
 ```
 
 ```python
-CPSolver(...)
-CPSolver.fit(...)
+SparseSolver(backend) # Initialize the solver for sparse tensors, either backend = 'cpu' for which numpy and scipy is used, or backend = 'gpu' for which cupy is used
+SparseSolver.fit(tensor, rank, method, ...) # Calculate the CoreID, return the selected index sets and satellite matrices, tensor has to be an instance of util.sparse.SpTensor (a COO format of sparse tensor)
 ```
 
 ## SatID
 
 ```python
-CPSolver(...)
-CPSolver.fit(...)
+CPSolver(backend) # Initialize the solver for CP tensors, either backend = 'cpu' for which numpy and scipy is used, or backend = 'gpu' for which cupy is used.
+CPSolver.fit(tensor, rank, method, ...) # Calculate the SatID, return the selected index sets, satellite matrices, and a list of CP factors whose contraction gives the reconstruction tensor.
 ```
 
 ```python
-CPSolver(...)
-CPSolver.fit(...)
+SparseSolver(backend) # Initialize the solver for sparse tensors, either backend = 'cpu' for which numpy and scipy is used, or backend = 'gpu' for which cupy is used.
+SparseSolver.fit(tensor, rank, method, ...) # Calculate the SatID, return the selected index sets and satellite matrices. The core is not computed in this method.
+SparseSolver.solve_core(tensor, satellites, ...) # calculate the core tensor given the target tensor and satellites. This is computationally expensive, and not necessary for estimating the reconstruction error.
 ```
 
 ## Copyright Notice
