@@ -6,7 +6,7 @@ Public code for tensor interpolative decomposition (ID). This code provides refe
 
 Please cite this paper when using or referencing this software.
 
-The main top-level functions are described below. See docstrings for full explanations of usage and `demo_*.py` for example calculations.
+The main top-level functions are described below. See docstrings for full explanations of usage and `demo_*.py` for example calculations. Not all functionality has been heavily optimized. Please open an issue if any bug is observed.
 
 ## CoreID
 
