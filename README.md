@@ -2,7 +2,7 @@
 
 Public code for tensor interpolative decomposition (ID). This code provides reference implementations of the algorithms discussed in the following preprint:
 
-> Zhang, Yifan, Fornace, Mark, and Lindsey, Michael. "Fast and Accurate Interpolative Decompositions for General and Structured Tensors." arXiv preprint (in prep, 2025)
+> Zhang, Yifan, Fornace, Mark, and Lindsey, Michael. "Fast and Accurate Interpolative Decompositions for General, Sparse, and Structured Tensors." arXiv preprint (2025).
 
 Please cite this paper when using or referencing this software.
 
