@@ -1,0 +1,31 @@
+[project]
+name = "TensorID"
+description = "Fast and interpolative interpolative decompositions of general, sparse, and scalable tensors"
+version = "1.0"
+dependencies = [
+  "httpx",
+  "numpy",
+  "scipy",
+  "tensorly",
+  "matplotlib"
+]
+requires-python = ">= 3.10"
+authors = [
+    {name = "Yifan Zhang"},
+    {name = "Mark Fornace"},
+]
+readme = "README.md"
+license-files = ["LICENSE.txt"]
+keywords = ["tensor", "interpolative decomposition", "sparse"]
+
+[project.optional-dependencies]
+gpu = ["cupy"]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["tensorID*"]
+
